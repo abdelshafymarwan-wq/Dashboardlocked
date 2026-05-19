@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Secure Access</title>
+
+  <style>
+    body{
+      margin:0;
+      padding:0;
+      height:100vh;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      background:#0f172a;
+      font-family:Arial, sans-serif;
+    }
+
+    .login-box{
+      background:#1e293b;
+      padding:40px;
+      border-radius:16px;
+      width:340px;
+      text-align:center;
+      box-shadow:0 0 30px rgba(0,0,0,0.35);
+    }
+
+    h1{
+      color:white;
+      margin-bottom:10px;
+    }
+
+    p{
+      color:#cbd5e1;
+      margin-bottom:25px;
+      font-size:14px;
+    }
+
+    input{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      margin-bottom:15px;
+      font-size:16px;
+      box-sizing:border-box;
+    }
+
+    button{
+      width:100%;
+      padding:12px;
+      border:none;
+      border-radius:10px;
+      background:#2563eb;
+      color:white;
+      font-size:16px;
+      cursor:pointer;
+      transition:0.2s;
+    }
+
+    button:hover{
+      background:#1d4ed8;
+    }
+
+    .error{
+      color:#f87171;
+      margin-top:15px;
+      font-size:14px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Consultant Dashboard</h1>
+    <p>Please enter your access password</p>
+
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="checkPassword()">Access Dashboard</button>
+
+    <div class="error" id="error"></div>
+  </div>
+
+  <script>
+    function checkPassword() {
+
+      const correctPassword = "2025supply";
+
+      const enteredPassword =
+        document.getElementById("password").value;
+
+      if (enteredPassword === correctPassword) {
+
+        window.location.href =
+          "https://version2lock-mint-h7mfmh.mystrikingly.com/";
+
+      } else {
+
+        document.getElementById("error").innerText =
+          "Incorrect password.";
+
+      }
+    }
+  </script>
+
+</body>
+</html>
